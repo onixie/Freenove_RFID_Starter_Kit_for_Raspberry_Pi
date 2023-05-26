@@ -14,4 +14,6 @@ cargo run -p button_led
 
 ```sh
 cargo run -p table_lamp
+# or
+cargo run -p table_lamp --features reactive
 ```

@@ -5,3 +5,8 @@ edition.workspace = true
 
 [dependencies]
 rppal.workspace = true
+rxrust = { version = "1.0.0-beta.3", optional = true }
+futures = { version = "0.3.28", optional = true }
+
+[features]
+reactive = [ "dep:rxrust", "dep:futures" ]
