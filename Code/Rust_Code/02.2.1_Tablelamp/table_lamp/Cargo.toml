@@ -1,0 +1,7 @@
+[package]
+name = "table_lamp"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true

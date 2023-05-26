@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "00.0.0_Hello/hello",
+    "01.1.1_Blink/blink",
+    "02.1.1_ButtonLED/button_led",
+    "02.2.1_Tablelamp/table_lamp",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+rppal = "0.14.1"

@@ -1,0 +1,7 @@
+[package]
+name = "button_led"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
