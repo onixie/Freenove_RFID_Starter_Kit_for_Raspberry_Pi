@@ -5,6 +5,7 @@ members = [
     "02.1.1_ButtonLED/button_led",
     "02.2.1_Tablelamp/table_lamp",
     "03.1.1_LightWater/light_water",
+    "04.1.1_BreathingLED/breathing_led",
 ]
 
 [workspace.package]

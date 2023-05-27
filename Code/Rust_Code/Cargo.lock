@@ -62,6 +62,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "breathing_led"
+version = "0.1.0"
+dependencies = [
+ "rppal",
+]
+
+[[package]]
 name = "bumpalo"
 version = "3.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

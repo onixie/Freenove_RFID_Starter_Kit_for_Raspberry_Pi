@@ -1,0 +1,10 @@
+[package]
+name = "breathing_led"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
+
+[features]
+hard = []
