@@ -26,7 +26,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         let rgb: [u8; 3] = rng.gen::<[u8; 3]>();
 
         for (pin, intensity) in rgb_pins.iter_mut().zip(rgb) {
-            pin.set_pwm_frequency(PWM_FREQUENCY, intensity as f64 / std::u8::MAX as f64).expect("fail to set soft pwm");
+            pin.set_pwm_frequency(PWM_FREQUENCY, intensity as f64 / std::u8::MAX as f64)
+                .expect("fail to set soft pwm");
         }
         println!("r={},  g={},  b={}", rgb[0], rgb[1], rgb[2]);
         thread::sleep(Duration::from_millis(1000));

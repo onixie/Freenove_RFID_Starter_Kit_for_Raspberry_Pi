@@ -58,6 +58,6 @@ patchelf --set-interpreter /lib/ld-linux-armhf.so.3 target/*/debug/$PACKAGE
 
 ## Copy and execute the binary on raspberry pi
 ```sh
-scp -R target/*/debug/$PACKAGE <user>@<pi>:~/
+scp -r target/*/debug/$PACKAGE <user>@<pi>:~/
 ssh <user>@<pi> -C "./$PACKAGE"
 ```
