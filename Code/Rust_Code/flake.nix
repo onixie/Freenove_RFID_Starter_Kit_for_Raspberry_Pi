@@ -11,11 +11,12 @@
   outputs = { self, nixpkgs, flake-utils }:
   flake-utils.lib.eachSystem ["x86_64-linux"] (system:
   let
-    pkgs = import nixpkgs {
-      crossSystem = {
-        config = "armv7l-unknown-linux-gnueabihf";
-      };
+  pkgs = import nixpkgs {
+    inherit system;
+    crossSystem = {
+      config = "armv7l-unknown-linux-gnueabihf";
     };
+  };
   in {
     devShell = pkgs.mkShell {
       nativeBuildInputs = with pkgs; [
