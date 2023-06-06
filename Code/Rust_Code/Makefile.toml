@@ -1,0 +1,25 @@
+[config]
+default_to_workspace = false
+
+[env]
+INTERPRETER = "/lib/ld-linux-armhf.so.3"
+USER = "y"
+RPI = "192.168.1.19"
+
+[tasks.build]
+command = "nix"
+args = ["develop", "-c", "cargo", "build", "-p", "${@}"]
+
+[tasks.patch]
+command = "nix"
+args = ["develop", "-c", "patchelf", "--set-interpreter", "${INTERPRETER}", "target/${CARGO_MAKE_CRATE_TARGET_TRIPLE}/debug/${@}"]
+
+[tasks.deploy]
+command = "scp"
+args = ["-r", "target/${CARGO_MAKE_CRATE_TARGET_TRIPLE}/debug/${@}", "${USER}@${RPI}:~/"]
+dependencies = [ "build", "patch" ]
+
+[tasks.run]
+command = "ssh"
+args = ["${USER}@${RPI}", "-C", "./${@}"]
+dependencies = [ "deploy" ]

@@ -32,7 +32,17 @@ cargo run -p breathing_led --features hard
 
 # Cross compile on x86_64 host NixOS operating system
 
-## Setup dev environment
+### Build, deploy and run in one go with cargo-make
+
+```sh
+makers run <package>
+```
+
+_Check Makefile.toml for more details._
+
+## Manual steps
+
+### Enter dev environment
 
 ```sh
 # for flake user
@@ -42,21 +52,21 @@ nix develop
 nix-shell crossShell.nix
 ```
 
-## Build the package
+### Build the package
 
 ```sh
 export PACKAGE=<package>
-```
-```sh
 cargo build -p $PACKAGE
 ```
 
-## Patch the binary
+### Patch the binary
+
 ```sh
 patchelf --set-interpreter /lib/ld-linux-armhf.so.3 target/*/debug/$PACKAGE
 ```
 
-## Copy and execute the binary on raspberry pi
+### Copy and execute the binary on raspberry pi
+
 ```sh
 scp -r target/*/debug/$PACKAGE <user>@<pi>:~/
 ssh <user>@<pi> -C "./$PACKAGE"
