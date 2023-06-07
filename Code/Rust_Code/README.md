@@ -30,6 +30,10 @@ cargo run -p breathing_led
 cargo run -p breathing_led --features hard
 ```
 
+```sh
+cargo run -p door_bell
+```
+
 # Cross compile on x86_64 host NixOS operating system
 
 ### Build, deploy and run in one go with cargo-make

@@ -7,6 +7,7 @@ members = [
     "03.1.1_LightWater/light_water",
     "04.1.1_BreathingLED/breathing_led",
     "05.1.1_ColorfulLED/colorful_led",
+    "06.1.1_Doorbell/door_bell",
 ]
 
 [workspace.package]
