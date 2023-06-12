@@ -10,6 +10,7 @@ members = [
     "06.1.1_Doorbell/door_bell",
     "06.2.1_Alertor/alertor",
     "07.1.1_ADC/adc",
+    "08.1.1_Softlight/soft_light",
 ]
 
 [workspace.package]
@@ -18,3 +19,4 @@ edition = "2021"
 
 [workspace.dependencies]
 rppal = "0.14.1"
+anyhow = "1.0.71"
