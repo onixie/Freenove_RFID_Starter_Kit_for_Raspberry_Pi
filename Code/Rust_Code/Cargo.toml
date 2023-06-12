@@ -9,6 +9,7 @@ members = [
     "05.1.1_ColorfulLED/colorful_led",
     "06.1.1_Doorbell/door_bell",
     "06.2.1_Alertor/alertor",
+    "07.1.1_ADC/adc",
 ]
 
 [workspace.package]

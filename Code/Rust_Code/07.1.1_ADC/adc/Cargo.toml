@@ -1,0 +1,8 @@
+[package]
+name = "adc"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
+anyhow = "1.0.71"
