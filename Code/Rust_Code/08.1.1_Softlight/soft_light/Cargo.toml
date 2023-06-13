@@ -6,3 +6,4 @@ edition.workspace = true
 [dependencies]
 rppal.workspace = true
 anyhow.workspace = true
+bitflags = "2.3.2"
