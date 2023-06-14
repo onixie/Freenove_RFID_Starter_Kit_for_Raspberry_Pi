@@ -13,6 +13,7 @@ members = [
     "08.1.1_Softlight/soft_light",
     "09.1.1_ColorfulSoftlight/colorful_soft_light",
     "10.1.1_Nightlamp/night_lamp",
+    "11.1.1_Thermometer/thermometer",
 ]
 
 [workspace.package]
