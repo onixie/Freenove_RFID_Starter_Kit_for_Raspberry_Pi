@@ -378,6 +378,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "joystick"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "bitflags 2.3.2",
+ "rppal",
+]
+
+[[package]]
 name = "js-sys"
 version = "0.3.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
