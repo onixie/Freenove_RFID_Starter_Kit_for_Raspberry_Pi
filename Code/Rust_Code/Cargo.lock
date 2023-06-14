@@ -129,6 +129,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "colorful_soft_light"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "bitflags 2.3.2",
+ "rppal",
+]
+
+[[package]]
 name = "concurrent-queue"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
