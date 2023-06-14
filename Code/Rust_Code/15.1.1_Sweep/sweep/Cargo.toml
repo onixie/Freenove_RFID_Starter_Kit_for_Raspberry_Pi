@@ -1,0 +1,8 @@
+[package]
+name = "sweep"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
+anyhow.workspace = true

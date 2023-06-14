@@ -15,6 +15,7 @@ members = [
     "10.1.1_Nightlamp/night_lamp",
     "11.1.1_Thermometer/thermometer",
     "12.1.1_Joystick/joystick",
+    "15.1.1_Sweep/sweep",
 ]
 
 [workspace.package]
