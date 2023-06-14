@@ -19,10 +19,6 @@ fn main() -> Result<()> {
         true,
     )?;
 
-    //let mut servo = Gpio::new()?.get(17)?.into_output();
-    // servo.set_pwm(Duration::from_millis(20), Duration::from_micros(500))?;
-    //servo.clear_pwm()?;
-
     let clockwise = OPREATING_RANGE;
     let counter_clockwise = OPREATING_RANGE.rev();
 
