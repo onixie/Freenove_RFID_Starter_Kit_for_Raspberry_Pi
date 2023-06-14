@@ -11,6 +11,7 @@ members = [
     "06.2.1_Alertor/alertor",
     "07.1.1_ADC/adc",
     "08.1.1_Softlight/soft_light",
+    "10.1.1_Nightlamp/night_lamp",
 ]
 
 [workspace.package]
