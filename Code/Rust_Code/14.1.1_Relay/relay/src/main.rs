@@ -6,8 +6,8 @@ fn main() -> Result<()> {
     println!("Program is starting...");
 
     let mut relay_on = false;
-    let mut button_off = true;
-    let mut last_button_off = true;
+    let mut button_on = false;
+    let mut last_button_on = false;
     let mut last_change_time = Instant::now();
     // adjust the duration if button doesn't respond well.
     let stable_duration = Duration::from_millis(10);
@@ -19,17 +19,17 @@ fn main() -> Result<()> {
         let reading = button.is_low();
 
         // update the last read time if the button state isn't stable.
-        if reading != last_button_off {
-            last_button_off = reading;
+        if reading != last_button_on {
+            last_button_on = reading;
             last_change_time = Instant::now();
         }
 
         // the same button state lasts for the threshold duration.
         if Instant::now() - last_change_time > stable_duration {
-            if reading != button_off {
+            if reading != button_on {
                 // update the read button state
-                button_off = reading;
-                if button_off {
+                button_on = reading;
+                if button_on {
                     println!("Button is pressed!");
 
                     relay_on = !relay_on;
