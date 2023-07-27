@@ -9,7 +9,8 @@ fn main() -> Result<()> {
     let mut button_off = true;
     let mut last_button_off = true;
     let mut last_change_time = Instant::now();
-    let stable_duration = Duration::from_millis(20);
+    // adjust the duration if button doesn't respond well.
+    let stable_duration = Duration::from_millis(10);
 
     let button = Gpio::new()?.get(18)?.into_input_pullup();
     let mut relay = Gpio::new()?.get(17)?.into_output_low();
