@@ -16,6 +16,7 @@ members = [
     "11.1.1_Thermometer/thermometer",
     "12.1.1_Joystick/joystick",
     "13.1.1_Motor/motor",
+    "14.1.1_Relay/relay",
     "15.1.1_Sweep/sweep",
 ]
 

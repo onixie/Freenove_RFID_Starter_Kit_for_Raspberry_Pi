@@ -575,6 +575,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "relay"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rppal",
+]
+
+[[package]]
 name = "rppal"
 version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
