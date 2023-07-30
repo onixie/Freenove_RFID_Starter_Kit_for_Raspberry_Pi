@@ -6,11 +6,7 @@ use std::time::Duration;
 fn main() -> Result<()> {
     println!("Hello, world!");
 
-    let mut bar_led = SN74HC595::new(
-        17, 
-        27, 
-        22
-    )?;
+    let mut bar_led = SN74HC595::new(17, 27, 22)?;
 
     loop {
         for i in (0..8).chain((0..8).rev()) {
@@ -20,7 +16,6 @@ fn main() -> Result<()> {
         }
     }
 }
-
 
 struct SN74HC595 {
     data: OutputPin,

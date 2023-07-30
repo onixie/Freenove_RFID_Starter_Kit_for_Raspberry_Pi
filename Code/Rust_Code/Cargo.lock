@@ -629,6 +629,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "seven_segment_display"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rppal",
+]
+
+[[package]]
 name = "slab"
 version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
