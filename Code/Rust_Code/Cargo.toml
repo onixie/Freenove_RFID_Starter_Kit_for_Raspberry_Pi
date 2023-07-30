@@ -19,6 +19,7 @@ members = [
     "14.1.1_Relay/relay",
     "15.1.1_Sweep/sweep",
     "16.1.1_SteppingMotor/stepping_motor",
+    "17.1.1_LightWater02/light_water_02",
 ]
 
 [workspace.package]

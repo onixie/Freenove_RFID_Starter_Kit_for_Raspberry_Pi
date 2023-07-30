@@ -419,6 +419,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "light_water_02"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rppal",
+]
+
+[[package]]
 name = "linux-raw-sys"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
