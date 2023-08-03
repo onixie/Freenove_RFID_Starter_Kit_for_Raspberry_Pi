@@ -21,5 +21,5 @@ dependencies = [ "build", "patch" ]
 
 [tasks.run]
 command = "ssh"
-args = ["-tt", "${USER}@${RPI}", "-C", "./${@}"]
+args = ["-tt", "${USER}@${RPI}", "-C", "RUST_LOG=info", "./${@}"]
 dependencies = [ "deploy" ]

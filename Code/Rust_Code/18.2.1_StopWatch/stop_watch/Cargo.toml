@@ -1,0 +1,12 @@
+[package]
+name = "stop_watch"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
+anyhow.workspace = true
+timer = "0.2.0"
+chrono = "0.4.26"
+log = "0.4.19"
+env_logger = "0.10.0"
