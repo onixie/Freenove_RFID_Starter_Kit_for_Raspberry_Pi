@@ -905,6 +905,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "ultrasonic_ranging"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rppal",
+]
+
+[[package]]
 name = "unicode-ident"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
