@@ -6,7 +6,7 @@ use std::time::{Duration, Instant};
 
 pub struct DHT {
     data_pin: IoPin,
-    buffer: BitArray<[usize; 2]>,
+    buffer: BitArray<[usize; 2]>, // 40 bits
 }
 
 impl DHT {
@@ -62,7 +62,7 @@ impl DHT {
 
     fn check_parity(&self) -> bool {
         self.buffer[0..8].load::<u8>()
-            == (1..5)
+            == (1..=4)
                 .map(|i| self.buffer[8 * i..8 * (i + 1)].load::<u8>())
                 .sum::<u8>()
     }
