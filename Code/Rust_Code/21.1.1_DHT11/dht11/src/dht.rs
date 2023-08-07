@@ -30,12 +30,12 @@ impl DHT {
 
         self.data_pin.set_mode(Mode::Input);
         self.wait_for(Level::Low, Duration::from_micros(100))?;
-        self.wait_until(Level::Low, Duration::from_micros(100))?; // 80us
-        self.wait_until(Level::High, Duration::from_micros(100))?; // 80us
+        self.wait_end_of(Level::Low, Duration::from_micros(100))?; // 80us
+        self.wait_end_of(Level::High, Duration::from_micros(100))?; // 80us
 
         for i in (0..40).rev() {
-            self.wait_until(Level::Low, Duration::from_micros(100))?; // 50us
-            let time = self.wait_until(Level::High, Duration::from_micros(100))?;
+            self.wait_end_of(Level::Low, Duration::from_micros(100))?; // 50us
+            let time = self.wait_end_of(Level::High, Duration::from_micros(100))?;
 
             self.buffer.set(i, time > Duration::from_micros(60)); // 26-28us -> 0, 70us -> 1
         }
@@ -79,11 +79,11 @@ impl DHT {
         }
     }
 
-    fn wait_until(&self, level: Level, timeout: Duration) -> Result<Duration> {
+    fn wait_end_of(&self, level: Level, timeout: Duration) -> Result<Duration> {
         let t = Instant::now();
         while self.data_pin.read() == level {
             if t.elapsed() > timeout {
-                return Err(anyhow!("timeout to wait for {level}"));
+                return Err(anyhow!("timeout to wait for the end of {level}"));
             }
         }
         Ok(t.elapsed())
