@@ -23,6 +23,7 @@ members = [
     "18.1.1_SevenSegmentDisplay/seven_segment_display",
     "18.2.1_StopWatch/stop_watch",
     "19.1.1_LEDMatrix/led_matrix",
+    "21.1.1_DHT11/dht11",
     "23.1.1_UltrasonicRanging/ultrasonic_ranging",
 ]
 

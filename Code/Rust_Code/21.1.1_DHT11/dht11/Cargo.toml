@@ -1,0 +1,9 @@
+[package]
+name = "dht11"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rppal.workspace = true
+anyhow.workspace = true
+bitvec = "1.0.1"
