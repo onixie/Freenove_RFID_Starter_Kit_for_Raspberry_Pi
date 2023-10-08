@@ -24,6 +24,7 @@ members = [
     "18.2.1_StopWatch/stop_watch",
     "19.1.1_LEDMatrix/led_matrix",
     "21.1.1_DHT11/dht11",
+    "22.1.1_MatrixKeypad/matrix_keypad",
     "23.1.1_UltrasonicRanging/ultrasonic_ranging",
 ]
 
